@@ -1,6 +1,7 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import About from '../components/about/About';
+import CurrencyDetail from '../components/currencyDetail/CurrencyDetail';
 import CurrencyList from '../components/currencyList/CurrencyList';
 import Home from '../components/menu/Menu';
 import {getHeaderTitle, screenOptions} from './helpers';
@@ -28,6 +29,13 @@ function Navigator() {
       <Stack.Screen
         name="CurrencyList"
         component={CurrencyList}
+        options={({route}) => ({
+          headerTitle: getHeaderTitle(route),
+        })}
+      />
+      <Stack.Screen
+        name="CurrencyDetail"
+        component={CurrencyDetail}
         options={({route}) => ({
           headerTitle: getHeaderTitle(route),
         })}

@@ -6,16 +6,16 @@ import {RootStackParamList} from './paramTypes';
 
 const screenOptions = {
   headerStyle: {
-    backgroundColor: '#6c9df0',
+    backgroundColor: 'whitesmoke',
   },
   headerTransparent: true,
-  headerTintColor: 'whitesmoke',
+  headerTintColor: '#6c9df0',
 };
 
 function getHeaderTitle(
   route: RouteProp<RootStackParamList, keyof RootStackParamList>,
 ) {
-  const routeName = getFocusedRouteNameFromRoute(route) ?? 'Home';
+  const routeName = getFocusedRouteNameFromRoute(route);
 
   switch (routeName) {
     case 'Home':
@@ -24,6 +24,8 @@ function getHeaderTitle(
       return 'About';
     case 'CurrencyList':
       return 'Currency list';
+    case 'CurrencyDetail':
+      return 'Currency Detail';
   }
 }
 

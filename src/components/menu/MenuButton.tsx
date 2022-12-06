@@ -16,7 +16,7 @@ function MenuButton({title, onPress}: Props) {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    backgroundColor: '#6c9df0',
+    backgroundColor: 'whitesmoke',
     borderRadius: 12,
     minHeight: 48,
     alignItems: 'center',
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   buttonTitle: {
-    color: 'whitesmoke',
+    color: '#6c9df0',
     fontSize: 21,
     fontWeight: '500',
   },
