@@ -32,9 +32,6 @@ function CurrencyList({
     },
   );
 
-  // console.log(data?.date);
-  console.log(data);
-
   return (
     <SafeAreaView style={styles.page}>
       {!isLoading && data ? (
@@ -57,23 +54,22 @@ function CurrencyList({
           }}
           ListHeaderComponent={() => {
             return (
-              <View style={styles.headerContainer}>
-                <View style={styles.amountDateContainer}>
+              <>
+                <View style={styles.headerRow}>
                   <Text style={styles.base}>base: </Text>
-                  <Text style={styles.baseContent}>{data.base}</Text>
+                  <Text style={styles.baseResult}>{data.base}</Text>
                 </View>
 
-                <View style={styles.amountDateContainer}>
-                  <Text style={styles.amountDataText}>
-                    amount: {data.amount}
-                  </Text>
-                  <Text style={styles.amountDataText}>
+                <View style={styles.headerRow}>
+                  <Text style={styles.amountData}>amount: {data.amount}</Text>
+                  <Text style={styles.amountData}>
                     date: {formatDate(data?.date)}
                   </Text>
                 </View>
-              </View>
+              </>
             );
           }}
+          ListHeaderComponentStyle={styles.headerContainer}
         />
       ) : (
         <ActivityIndicator size="small" color="whitesmoke" />
