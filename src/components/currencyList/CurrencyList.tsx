@@ -38,37 +38,33 @@ function CurrencyList({
         <FlatList
           data={Object.keys(data.rates)}
           contentContainerStyle={styles.contentContainer}
-          renderItem={item => {
-            return (
-              <Button
-                title={item.item}
-                onPress={() =>
-                  navigation.navigate('CurrencyDetail', {
-                    currency: item.item,
-                    exchangeRate:
-                      data?.rates[item.item as keyof typeof data.rates],
-                  })
-                }
-              />
-            );
-          }}
-          ListHeaderComponent={() => {
-            return (
-              <>
-                <View style={styles.headerRow}>
-                  <Text style={styles.base}>base: </Text>
-                  <Text style={styles.baseResult}>{data.base}</Text>
-                </View>
+          renderItem={item => (
+            <Button
+              title={item.item}
+              onPress={() =>
+                navigation.navigate('CurrencyDetail', {
+                  currency: item.item,
+                  exchangeRate:
+                    data?.rates[item.item as keyof typeof data.rates],
+                })
+              }
+            />
+          )}
+          ListHeaderComponent={() => (
+            <>
+              <View style={styles.headerRow}>
+                <Text style={styles.base}>base: </Text>
+                <Text style={styles.baseResult}>{data.base}</Text>
+              </View>
 
-                <View style={styles.headerRow}>
-                  <Text style={styles.amountData}>amount: {data.amount}</Text>
-                  <Text style={styles.amountData}>
-                    date: {formatDate(data?.date)}
-                  </Text>
-                </View>
-              </>
-            );
-          }}
+              <View style={styles.headerRow}>
+                <Text style={styles.amountData}>amount: {data.amount}</Text>
+                <Text style={styles.amountData}>
+                  date: {formatDate(data?.date)}
+                </Text>
+              </View>
+            </>
+          )}
           ListHeaderComponentStyle={styles.headerContainer}
         />
       ) : (
