@@ -7,13 +7,13 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   currency: {
-    fontSize: 60,
+    fontSize: 55,
     color: 'whitesmoke',
     fontWeight: 'bold',
     bottom: 70,
   },
   exchangeRate: {
-    fontSize: 90,
+    fontSize: 70,
     color: 'whitesmoke',
     fontWeight: '200',
   },

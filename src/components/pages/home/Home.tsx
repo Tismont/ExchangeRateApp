@@ -1,8 +1,8 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../navigation/paramTypes';
-import Button from '../button/Button';
+import {RootStackParamList} from '../../../navigation/paramTypes';
+import Button from '../../button/Button';
 
 function Home({
   navigation,

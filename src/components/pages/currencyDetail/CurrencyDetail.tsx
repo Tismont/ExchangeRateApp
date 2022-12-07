@@ -1,7 +1,7 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
-import {RootStackParamList} from '../../navigation/paramTypes';
+import {RootStackParamList} from '../../../navigation/paramTypes';
 import {styles} from './styles';
 
 function CurrencyDetail({
