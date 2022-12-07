@@ -6,7 +6,7 @@ import Navigator from './src/navigation/Navigator';
 const queryClient = new QueryClient();
 
 const navTheme = DefaultTheme;
-navTheme.colors.background = '#6c9df0';
+navTheme.colors.background = '#568dfc';
 
 const App = () => {
   return (

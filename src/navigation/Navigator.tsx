@@ -4,7 +4,7 @@ import About from '../components/about/About';
 import CurrencyDetail from '../components/currencyDetail/CurrencyDetail';
 import CurrencyList from '../components/currencyList/CurrencyList';
 import Home from '../components/menu/Menu';
-import {getHeaderTitle, screenOptions} from './helpers';
+import {screenOptions} from './helpers';
 import {RootStackParamList} from './paramTypes';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -15,30 +15,30 @@ function Navigator() {
       <Stack.Screen
         name="Home"
         component={Home}
-        options={({route}) => ({
-          headerTitle: getHeaderTitle(route),
-        })}
+        options={{
+          headerTitle: 'Home',
+        }}
       />
       <Stack.Screen
         name="About"
         component={About}
-        options={({route}) => ({
-          headerTitle: getHeaderTitle(route),
-        })}
+        options={{
+          headerTitle: 'About',
+        }}
       />
       <Stack.Screen
         name="CurrencyList"
         component={CurrencyList}
-        options={({route}) => ({
-          headerTitle: getHeaderTitle(route),
-        })}
+        options={{
+          headerTitle: 'Currency list',
+        }}
       />
       <Stack.Screen
         name="CurrencyDetail"
         component={CurrencyDetail}
-        options={({route}) => ({
-          headerTitle: getHeaderTitle(route),
-        })}
+        options={{
+          headerTitle: 'Currency detail',
+        }}
       />
     </Stack.Navigator>
   );
