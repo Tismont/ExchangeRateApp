@@ -3,12 +3,10 @@
  */
 
 import 'react-native';
-import React from 'react';
-import App from '../App';
+import {formatDate} from '../src/helpers/date';
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-
-it('renders correctly', () => {
-  renderer.create(<App />);
+describe('date', () => {
+  test('should date correct date', () => {
+    expect(formatDate('2022-12-06')).toBe('6. 12. 2022');
+  });
 });

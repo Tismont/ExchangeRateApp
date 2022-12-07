@@ -32,6 +32,9 @@ function CurrencyList({
     },
   );
 
+  // console.log(data?.date);
+  console.log(data);
+
   return (
     <SafeAreaView style={styles.page}>
       {!isLoading && data ? (

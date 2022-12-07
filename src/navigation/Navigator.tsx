@@ -1,4 +1,3 @@
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 import About from '../components/about/About';
 import CurrencyDetail from '../components/currencyDetail/CurrencyDetail';
@@ -6,6 +5,7 @@ import CurrencyList from '../components/currencyList/CurrencyList';
 import Home from '../components/home/Home';
 import {screenOptions} from './helpers';
 import {RootStackParamList} from './paramTypes';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
