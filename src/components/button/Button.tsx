@@ -1,5 +1,6 @@
 import React from 'react';
 import {GestureResponderEvent, Pressable, StyleSheet, Text} from 'react-native';
+import {colors} from '../../style/colors';
 
 interface Props {
   title: string;
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   buttonTitle: {
-    color: '#568dfc',
+    color: colors.primaryBlue,
     fontSize: 21,
     fontWeight: '500',
   },

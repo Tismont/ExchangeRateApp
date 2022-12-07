@@ -1,5 +1,6 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {colors} from '../../style/colors';
 
 function About() {
   return (
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
   },
   content: {
     fontSize: 20,
-    color: '#568dfc',
+    color: colors.primaryBlue,
   },
 });
 
