@@ -1,24 +1,12 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
-import {
-  FlatList,
-  Pressable,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-} from 'react-native';
-import {useQuery, UseQueryResult} from 'react-query';
+import {Pressable, SafeAreaView, StyleSheet, Text} from 'react-native';
 import {RootStackParamList} from '../../navigation/paramTypes';
 
-interface Currencies {
-  supportedPairs: [string];
-  message: string;
-  code: number;
-}
-
-type Props = NativeStackScreenProps<RootStackParamList, 'CurrencyDetail'>;
-
-function CurrencyDetail({route, navigation}: Props) {
+function CurrencyDetail({
+  route,
+  navigation,
+}: NativeStackScreenProps<RootStackParamList, 'CurrencyDetail'>) {
   console.log(route.params);
 
   return (

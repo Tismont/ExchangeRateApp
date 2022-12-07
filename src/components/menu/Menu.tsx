@@ -1,19 +1,19 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import MenuButton from './MenuButton';
 import {RootStackParamList} from '../../navigation/paramTypes';
+import Button from '../button/Button';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
-
-function Home({navigation}: Props) {
+function Home({
+  navigation,
+}: NativeStackScreenProps<RootStackParamList, 'Home'>) {
   return (
     <SafeAreaView style={styles.page}>
-      <MenuButton
+      <Button
         title="Currency list"
         onPress={() => navigation.navigate('CurrencyList')}
       />
-      <MenuButton title="About" onPress={() => navigation.navigate('About')} />
+      <Button title="About" onPress={() => navigation.navigate('About')} />
     </SafeAreaView>
   );
 }
