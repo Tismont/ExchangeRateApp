@@ -45,7 +45,7 @@ function CurrencyList({
                 onPress={() =>
                   navigation.navigate('CurrencyDetail', {
                     currency: item.item,
-                    currencyRate:
+                    exchangeRate:
                       data?.rates[item.item as keyof typeof data.rates],
                   })
                 }
